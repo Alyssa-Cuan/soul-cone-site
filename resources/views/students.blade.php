@@ -9,7 +9,7 @@
 
     <!-- Create student Form... -->
         <!-- New student Form -->
-        <form action="/student" method="POST" class="form-horizontal">
+        <form action="{{ url('students') }}" method="POST" class="form-horizontal">
         {{ csrf_field() }}
 
         <!-- student Name -->
@@ -62,8 +62,9 @@
 
                                 <!-- Delete Button -->
                             <td>
-                                <form action="{{ url('student/'.$student->id) }}" method="POST">
+                                <form action="{{ url('students/'.$student->id) }}" method="POST">
                                     {{ csrf_field() }}
+                                    {{ method_field('DELETE') }}
 
                                     <button type="submit" class="btn btn-danger">
                                         <i class="fa fa-trash"></i> Delete
