@@ -1,5 +1,8 @@
 <?php
 
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
+use App\Student;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -11,6 +14,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//takes care of the CRUD related operations
+//run php artisan route:list to see all the routes
+Route::resource('students', 'StudentController');
+
