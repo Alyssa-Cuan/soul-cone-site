@@ -1,8 +1,6 @@
 <?php
 
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Validator;
-use App\Student;
+use App\Car;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,3 +16,4 @@ use App\Student;
 //run php artisan route:list to see all the routes
 Route::resource('students', 'StudentController');
 
+Route::get('cars', 'CarController@index');
